@@ -38,6 +38,10 @@ var towers_game = function() {
     return [from_tower, to_tower];
   };
 
+  var last = function(array) {
+    return array[array.length - 1];
+  };
+
   while (!victory()) {
     print_board();
     var move = get_input();
@@ -50,7 +54,10 @@ var towers_game = function() {
       continue;
     }
 
-    if (towers[from][towers[from].length - 1])
+    if (last(towers[from]) > last(towers[to])) {
+      alert("Illegal move.");
+      continue;
+    }
 
     if (towers[from].length != 0) {
       towers[to].push(towers[from].pop());
