@@ -10,7 +10,7 @@ function clear() {
 
 var towers_game = function() {
   var towers = [
-    [3,2,1],
+    [5,4,3,2,1],
     [],
     []
   ];
@@ -64,6 +64,7 @@ var towers_game = function() {
     }
   };
 
+  print_board();
   println("YOU WIN WIN WIN WIN WIN");
 };
 
